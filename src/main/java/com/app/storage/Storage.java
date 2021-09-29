@@ -4,9 +4,18 @@ import java.util.ArrayList;
 
 public class Storage {
 
+    private static Storage STORAGE;
     private ArrayList<Category> categoryList = new ArrayList<>();
     private ArrayList<Product> productList = new ArrayList<>();
 
+    private Storage() {}
+
+    public static Storage getStorage() {
+        if (STORAGE == null) {
+            STORAGE = new Storage();
+        }
+        return STORAGE;
+    }
     public void addCategory(Category category) {
         categoryList.add(category);
         String name = category.getName();

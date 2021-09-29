@@ -7,7 +7,7 @@ import main.java.com.app.storage.Storage;
 public class StorageTest {
 
     public static void main(String[] args) {
-        Storage storage = new Storage();
+        Storage storage = Storage.getStorage();
 
         Category category1 = new Category("Обувь");
         Category category2 = new Category("Верхняя одежда");
