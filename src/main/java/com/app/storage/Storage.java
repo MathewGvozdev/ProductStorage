@@ -16,22 +16,12 @@ public class Storage {
         }
         return STORAGE;
     }
+
     public void addCategory(Category category) {
         categoryList.add(category);
         String name = category.getName();
         String format = String.format("Добавлена категория \"%s\".", name);
         System.out.println(format);
-    }
-
-    public ArrayList<Category> getCategoryList() {
-        return categoryList;
-    }
-
-    public void printCategoryList(ArrayList<Category> list) {
-        System.out.println("Список категорий: ");
-        for (Category category : list) {
-            System.out.println((list.indexOf(category) + 1) + ". " + category.getName());
-        }
     }
 
     public void addProduct(Product product) {
@@ -42,8 +32,27 @@ public class Storage {
         System.out.println(format);
     }
 
+    public void deleteProduct(Product product) {
+        productList.remove(product);
+        String name = product.getName();
+        String category = product.getCategory().getName();
+        String format = String.format("Продукт \"%s\" удален из категории \"%s\".", name, category);
+        System.out.println(format);
+    }
+
+    public ArrayList<Category> getCategoryList() {
+        return categoryList;
+    }
+
     public ArrayList<Product> getProductList() {
         return productList;
+    }
+
+    public void printCategoryList(ArrayList<Category> list) {
+        System.out.println("Список категорий: ");
+        for (Category category : list) {
+            System.out.println((list.indexOf(category) + 1) + ". " + category.getName());
+        }
     }
 
     public void printProductList(ArrayList<Product> list) {
@@ -51,14 +60,6 @@ public class Storage {
         for (Product product : list) {
             System.out.println((list.indexOf(product) + 1) + ". " + product.getName());
         }
-    }
-
-    public void deleteProduct(Product product) {
-        productList.remove(product);
-        String name = product.getName();
-        String category = product.getCategory().getName();
-        String format = String.format("Продукт \"%s\" удален из категории \"%s\".", name, category);
-        System.out.println(format);
     }
 
     public int getProductAmount() {
