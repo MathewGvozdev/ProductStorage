@@ -4,49 +4,42 @@ import main.java.com.app.storage.Category;
 import main.java.com.app.storage.Product;
 import main.java.com.app.storage.Storage;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Scanner;
+
 public class StorageTest {
 
     public static void main(String[] args) {
-        Storage storage = new Storage();
 
-        Category category1 = new Category("Обувь");
-        Category category2 = new Category("Верхняя одежда");
-        Category category3 = new Category("Штаны");
+        HashMap<String, String> products = new HashMap<>();
+        products.put("156", "Тапки");
+        products.put("164", "Сапоги");
+        products.put("181", "Кроссовки");
+        products.put("202", "Куртка");
+        products.put("287", "Байка");
+        products.put("230", "Майка");
+        products.put("332", "Брюки");
+        products.put("325", "Джинсы");
+        products.put("379", "Шорты");
 
-        Product product1 = new Product(category1, 155, "Тапки");
-        Product product2 = new Product(category1, 164, "Сапоги");
-        Product product3 = new Product(category1, 181, "Кроссовки");
+        Storage.addCategory(new Category("Обувь"));
+        Storage.addCategory(new Category("Верхняя одежда"));
+        Storage.addCategory(new Category("Штаны"));
 
-        Product product4 = new Product(category2, 202, "Куртка");
-        Product product5 = new Product(category2, 287, "Байка");
-        Product product6 = new Product(category2, 230, "Майка");
+        Storage.addProduct(new Product(Storage.getCategoryList().get(0), products));
 
-        Product product7 = new Product(category3, 332, "Брюки");
-        Product product8 = new Product(category3, 325, "Джинсы");
-        Product product9 = new Product(category3, 379, "Шорты");
+        Storage.printCategoryList(Storage.getCategoryList());
+        Storage.printProductList(Storage.getProductList());
+        Storage.printProductAmount();
 
-        storage.addCategory(category1);
-        storage.addCategory(category2);
-        storage.addCategory(category3);
+        Storage.deleteProduct(Storage.getProductList().get(0));
 
-        storage.addProduct(product1);
-        storage.addProduct(product2);
-        storage.addProduct(product3);
-        storage.addProduct(product4);
-        storage.addProduct(product5);
-        storage.addProduct(product6);
-        storage.addProduct(product7);
-        storage.addProduct(product8);
-        storage.addProduct(product9);
+        Storage.printCategoryList(Storage.getCategoryList());
+        Storage.printProductList(Storage.getProductList());
+        Storage.printProductAmount();
 
-        storage.printCategoryList(storage.getCategoryList());
-        storage.printProductList(storage.getProductList());
-        storage.printProductAmount();
-
-        storage.deleteProduct(product1);
-
-        storage.printCategoryList(storage.getCategoryList());
-        storage.printProductList(storage.getProductList());
-        storage.printProductAmount();
     }
 }

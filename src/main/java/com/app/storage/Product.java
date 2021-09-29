@@ -1,26 +1,26 @@
 package main.java.com.app.storage;
 
+import java.util.HashMap;
+
 public class Product {
 
     private Category category;
-    private int id;
-    private String name;
+    private HashMap<String, String> idAndName;
 
-    public Product(Category category, int id, String name) {
+    public Product(Category category, HashMap<String, String> idAndName) {
         this.category = category;
-        this.id = id;
-        this.name = name;
+        this.idAndName = idAndName;
     }
 
     public Category getCategory() {
         return category;
     }
 
-    public int getId() {
-        return id;
+    public HashMap<String, String> getIdAndName() {
+        return idAndName;
     }
 
-    public String getName() {
-        return name;
+    public String getName(String key) {
+        return idAndName.get(key);
     }
 }
