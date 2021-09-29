@@ -3,10 +3,10 @@ package main.java.com.app.storage;
 public class Product {
 
     private Category category;
-    private int id;
+    private String id;
     private String name;
 
-    public Product(Category category, int id, String name) {
+    public Product(Category category, String id, String name) {
         this.category = category;
         this.id = id;
         this.name = name;
@@ -16,7 +16,7 @@ public class Product {
         return category;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="220f3719-ab92-48e6-acb3-8edf7a9067eb" name="Changes" comment="add Singleton" />
+    <list default="true" id="220f3719-ab92-48e6-acb3-8edf7a9067eb" name="Changes" comment="Refactoring">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/storage/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/storage/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/StorageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/StorageTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632936782071</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactoring">
+      <created>1632937109829</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1632937109829</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -83,6 +94,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add Singleton" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Singleton" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
 </project>
